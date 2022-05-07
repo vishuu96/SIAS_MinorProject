@@ -22,10 +22,7 @@ struct Packet {
     float phermone;
 };
 
-struct Phermone_Levels {
-    float phermone_north, phermone_east, phermone_south, phermone_west;    
-} PL = {0.0, 0.0, 0.0, 0.0};
-
+float PL[] = {0.0, 0.0, 0.0, 0.0};
 
 float generate_random_phermone(void);   //generate a random value x: 0.0 > x <= 1.0
 
@@ -57,7 +54,7 @@ int main()
 
         //----------------------------------------
 
-        cout << packet_id << "," << packet.dir << "," << packet.phermone << "," << PL.phermone_north << "," << PL.phermone_east << "," << PL.phermone_south << "," << PL.phermone_west << "," << packet.Dcoord.first << "," << packet.Dcoord.second << ","/* add decision*/ << endl; //can pipe this output in a csv file from terminal at execution.
+        cout << packet_id << "," << packet.dir << "," << packet.phermone << "," << PL[0] << "," << PL[1] << "," << PL[3] << "," << PL[3]<< "," << packet.Dcoord.first << "," << packet.Dcoord.second << ","/* add decision*/ << endl; //can pipe this output in a csv file from terminal at execution.
     }
 
     return 0;
